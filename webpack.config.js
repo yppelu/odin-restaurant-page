@@ -35,11 +35,13 @@ module.exports = {
       title: 'Restaurant Page',
       filename: 'index.html',
       template: './src/template.html',
+      favicon: './src/common/assets/favicon.png',
     }),
   ],
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: '[name].js',
     clean: true,
+    assetModuleFilename: '[name][ext]',
   },
 }
