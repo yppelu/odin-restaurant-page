@@ -151,9 +151,8 @@ body {
   cursor: pointer;
   font-weight: 500;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  text-align: center;
+  vertical-align: middle;
 
   border: none;
   height: 3rem;
@@ -161,6 +160,11 @@ body {
 }
 
 .header__nav-tab:hover {
+  border-bottom: 0.25rem solid var(--accent-color);
+  padding-top: 0.25rem;
+}
+
+[data-active-tab="true"] {
   border-bottom: 0.25rem solid var(--accent-color);
   padding-top: 0.25rem;
 }
