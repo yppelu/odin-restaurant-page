@@ -37,9 +37,9 @@ function createHeaderLogoBlock() {
 function createHeaderLogoImage() {
   const image = document.createElement('img');
 
+  image.classList.add('header__logo-image');
   image.setAttribute('src', restaurantIcon);
   image.setAttribute('alt', 'Restaurant icon');
-  image.classList.add('header__logo-image');
 
   return image;
 }
@@ -66,12 +66,12 @@ function createHeaderNavBlock() {
 function createNavTab(text) {
   const tab = document.createElement('button');
 
+  tab.classList.add('header__nav-tab-btn');
   tab.setAttribute('type', 'button');
   (text === 'HOME')
     ? tab.setAttribute('data-active-tab', 'true')
     : tab.setAttribute('data-active-tab', 'false');
   setTabEventListener(tab);
-  tab.classList.add('header__nav-tab');
   tab.textContent = text;
 
   tabs[text] = tab;

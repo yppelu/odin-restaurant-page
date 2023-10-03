@@ -145,7 +145,7 @@ body {
   gap: 1rem;
 }
 
-.header__nav-tab {
+.header__nav-tab-btn {
   appearance: none;
   background-color: transparent;
   cursor: pointer;
@@ -159,7 +159,7 @@ body {
   width: 6rem;
 }
 
-.header__nav-tab:hover {
+.header__nav-tab-btn:hover {
   border-bottom: 0.25rem solid var(--accent-color);
   padding-top: 0.25rem;
 }
