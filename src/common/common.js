@@ -64,20 +64,34 @@ function createHeaderNavBlock() {
 }
 
 function createNavTab(text) {
-  const item = document.createElement('button');
+  const tab = document.createElement('button');
 
-  item.setAttribute('type', 'button');
-  item.classList.add('header__nav-tab');
-  item.textContent = text;
+  tab.setAttribute('type', 'button');
+  (text === 'HOME')
+    ? tab.setAttribute('data-active-tab', 'true')
+    : tab.setAttribute('data-active-tab', 'false');
+  setTabEventListener(tab);
+  tab.classList.add('header__nav-tab');
+  tab.textContent = text;
 
-  tabs[text] = item;
-  return item;
+  tabs[text] = tab;
+  return tab;
 }
 
 function createMain() {
   const main = document.createElement('main');
   main.classList.add('main');
   return main;
+}
+
+function setTabEventListener(tab) {
+  tab.addEventListener('click', () => {
+    for (let tab in tabs) {
+      if (tabs[tab].getAttribute('data-active-tab') === 'true')
+        tabs[tab].setAttribute('data-active-tab', 'false');
+    }
+    tab.setAttribute('data-active-tab', 'true');
+  });
 }
 
 export { createPageBase, tabs };
