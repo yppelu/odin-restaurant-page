@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
-  entry: './src/script.js',
+  entry: './src/index.js',
   devServer: {
     static: {
       directory: path.resolve(__dirname, 'dist'),
@@ -17,10 +17,10 @@ module.exports = {
       title: 'Restaurant Page',
       filename: 'index.html',
       template: './src/template.html',
-      favicon: './src/common/assets/favicon.png',
+      favicon: './src/favicon.png',
     }),
     new MiniCssExtractPlugin({
-      filename: 'style.css',
+      filename: 'index.css',
       chunkFilename: '[id].css',
       ignoreOrder: false,
     }),
@@ -43,7 +43,7 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'script.js',
+    filename: 'index.js',
     clean: true,
     assetModuleFilename: './assets/[name][ext]',
   },
