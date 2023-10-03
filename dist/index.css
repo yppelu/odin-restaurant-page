@@ -1,13 +1,34 @@
 @font-face {
   font-family: "Roboto";
   src:
-    local("Roboto"),
     url(./assets/Roboto-Regular.woff2) format("woff2"),
     url(./assets/Roboto-Regular.ttf) format("truetype");
   font-stretch: normal;
   font-style: normal;
   font-variant: normal;
   font-weight: 400;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src:
+    url(./assets/Roboto-Medium.woff2) format("woff2"),
+    url(./assets/Roboto-Medium.ttf) format("truetype");
+  font-stretch: normal;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src:
+    url(./assets/Roboto-Bold.woff2) format("woff2"),
+    url(./assets/Roboto-Bold.ttf) format("truetype");
+  font-stretch: normal;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 700;
 }
 
 *,
@@ -67,6 +88,10 @@ h6 {
   overflow-wrap: break-word;
 }
 
+:root {
+  --accent-color: #D4A373;
+}
+
 body {
   background-color: #FAEDCD;
   font-family: "Roboto", Arial, sans-serif;
@@ -77,10 +102,71 @@ body {
 #container {
   background-color: #FEFAE0;
   border-radius: 4px;
-  box-shadow: 0 0 8px -1px #D4A373;
+  box-shadow: 0 0 8px -1px var(--accent-color);
 
   margin: 16px auto;
   max-width: 1200px;
   width: calc(100% - 32px);
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+
+  padding: 0.5rem;
+  width: 100%;
+}
+
+.header__logo-block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+
+  height: 5rem;
+}
+
+.header__logo-title {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.header__logo-image {
+  height: 100%;
+}
+
+.header__nav-block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.header__nav-tab {
+  appearance: none;
+  background-color: transparent;
+  cursor: pointer;
+  font-weight: 500;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+  height: 3rem;
+  width: 6rem;
+}
+
+.header__nav-tab:hover {
+  border-bottom: 0.25rem solid var(--accent-color);
+  padding-top: 0.25rem;
+}
+
+.main {
+  padding: 0.5rem;
+  width: 100%;
 }
 
