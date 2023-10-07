@@ -1,0 +1,29 @@
+.contacts-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  margin-left: auto;
+  margin-right: auto;
+  width: min(100%, 800px);
+}
+
+.contacts-container__contact-block {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.contacts-container__map {
+  aspect-ratio: 4 / 3;
+  width: 100%;
+}
+
+.contacts-container__contacts-icon {
+  fill: var(--accent-color-2);
+
+  max-height: 1.5rem;
+  min-height: 1.5rem;
+  max-width: 1.5rem;
+  min-width: 1.5rem;
+}
