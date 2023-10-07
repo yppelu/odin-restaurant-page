@@ -1,0 +1,28 @@
+.home-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  align-items: center;
+  justify-content: center;
+
+  margin-left: auto;
+  margin-right: auto;
+  width: min(100%, 1000px);
+}
+
+.home-container__chief-photo-container {
+  border-radius: 1rem;
+  overflow: hidden;
+  object-fit: fill;
+
+  border: 0.2rem solid var(--accent-color);
+  height: 300px;
+  width: 250px;
+}
+
+.home-container__chief-quote {
+  font-style: italic;
+  letter-spacing: 0.05em;
+
+  width: clamp(300px, calc(100% - 250px - 1.5rem), 800px);
+}
