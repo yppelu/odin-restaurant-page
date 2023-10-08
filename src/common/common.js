@@ -77,7 +77,7 @@ function createNavTab(text) {
   tabName.textContent = text;
   tab.append(tabName);
 
-  tabs[text] = tab;
+  tabs[text.toLowerCase()] = tab;
   return tab;
 }
 
