@@ -89,10 +89,9 @@ h6 {
 }
 
 :root {
-  --accent-color: #606c38;
-  --accent-color-2: #BC6C25;
+  --accent-color: #BC6C25;
   --body-bg-color: #FEFAE0;
-  --content-bg-color: #FEFAE0;
+  --content-bg-color: #FFFFFF;
   --shadow-color: #D4A373;
 }
 
@@ -104,7 +103,7 @@ body {
 }
 
 #container {
-  background-color: var(#FEFAE0);
+  background-color: var(--content-bg-color);
   border-radius: 4px;
   box-shadow: 0 0 8px -1px var(--shadow-color);
 
@@ -163,6 +162,10 @@ body {
   width: 6rem;
 }
 
+.header__nav-tab-btn>h2 {
+  font: inherit;
+}
+
 .header__nav-tab-btn:hover {
   border-bottom: 0.25rem solid var(--accent-color);
   padding-top: 0.25rem;
@@ -174,6 +177,6 @@ body {
 }
 
 .main {
-  padding: 1rem;
+  padding: 2rem;
   width: 100%;
 }

@@ -72,7 +72,10 @@ function createNavTab(text) {
     ? tab.setAttribute('data-active-tab', 'true')
     : tab.setAttribute('data-active-tab', 'false');
   setTabEventListener(tab);
-  tab.textContent = text;
+
+  const tabName = document.createElement('h2');
+  tabName.textContent = text;
+  tab.append(tabName);
 
   tabs[text] = tab;
   return tab;
